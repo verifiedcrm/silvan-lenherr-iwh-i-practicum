@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        title= title
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Update Custom Object Form
+        a(href="/") Return to the homepage
+        form(method="POST" action="/update-cobj")
+            label(for="name") Name
+            input(type="text" id="name" name="name" required)
+            label(for="region") Region
+            input(type="text" id="region" name="region")
+            label(for="length_km") Length (km)
+            input(type="number" id="length_km" name="length_km" step="any")
+            button(type="submit") Submit
