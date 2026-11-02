@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet" href="/css/style.css")
+  body
+    h1 Hiking Trails
+    a(href="/update-cobj") Add to this table
+    table
+      thead
+        tr
+          th Name
+          th Region
+          th Length km
+      tbody
+        each trail in data
+          tr
+            td= trail.properties.name
+            td= trail.properties.region
+            td= trail.properties.length_km
