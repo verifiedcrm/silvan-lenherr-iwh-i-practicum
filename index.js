@@ -26,6 +26,30 @@ app.get('/update-cobj', (req, res) => {
 
 // * Code for Route 3 goes here
 
+app.post('/update-cobj', async (req, res) => {
+    const newTrail = {
+        properties: {
+            "name": req.body.name,
+            "region": req.body.region,
+            "length_km": req.body.length_km
+        }
+    };
+
+   const createTrail = `https://api.hubapi.com/crm/v3/objects/2-255946169`;
+    const headers = {
+        Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+        'Content-Type': 'application/json'
+    };
+
+    try {
+        await axios.post(createTrail, newTrail, { headers });
+        res.redirect('/');
+    } catch (err) {
+        console.error(err);
+     res.send('Error creating trail');
+    }
+});
+
 /** 
 * * This is sample code to give you a reference for how you should structure your calls. 
 
