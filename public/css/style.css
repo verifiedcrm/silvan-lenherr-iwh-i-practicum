@@ -56,3 +56,28 @@ input[type="submit"] {
     padding: .375rem 1rem;
     margin-top: 10px;
 }
+
+a {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 1rem;
+}
+
+th, td {
+    border: 1px solid lightgrey;
+    padding: .5rem 1rem;
+    text-align: left;
+}
+
+th {
+    background-color: #2e7d32;
+    color: white;
+}
+
+input[type="number"] {
+    padding: .25rem;
+}
